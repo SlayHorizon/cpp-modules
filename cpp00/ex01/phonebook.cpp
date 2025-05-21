@@ -2,7 +2,7 @@
 #include <cctype>
 
 
-class Contact
+class	Contact
 {
 	public:
 		int			index;
@@ -17,13 +17,20 @@ class Contact
 
 class	PhoneBook
 {
-	// private:
+	private:
+		int	_index;
 	
 	public:
-		Contact contact_list[8]; //If the user tries to add a 9th contact, replace the oldest one by the new one.
+		Contact contact_list[8];
+
+		PhoneBook() : _index(0) {};
+
 		void	addContact(Contact contact)
 		{
-			contact_list[0] = contact;
+			contact_list[this->_index] = contact;
+			this->_index++;
+			if (this->_index > 7)
+				this->_index = 0;
 		}
 };
 
@@ -37,7 +44,6 @@ int	main(int argc, char **argv)
 {
 	PhoneBook	phoneBook;
 	std::string	input;
-
 
 	(void)argc;
 	(void)argv;
@@ -92,7 +98,6 @@ void	searchCommand(PhoneBook *phoneBook)
 	for (int i = 0; i < 4; i++)
 	{
 		std::cout << std::string().assign(10, ' ').replace(10 - COLUMNS[i].length(), COLUMNS[i].length(), COLUMNS[i]);
-		//if (i < 3)
 		std::cout << "|";
 	}
 	std::cout << std::endl;
@@ -117,6 +122,7 @@ void	searchCommand(PhoneBook *phoneBook)
 	}
 
 	std::cout << "Which index would you like to display?" << std::endl;
+
 	int	n;
 	while (1)
 	{
