@@ -1,5 +1,5 @@
-#include <iostream>
-#include <cctype>
+#include <iostream>	// Standard Input / Output Streams Library (cin, cout)
+#include <cctype>	// Character handling functions (toupper(int c))
 
 
 int	main(int argc, char **argv)

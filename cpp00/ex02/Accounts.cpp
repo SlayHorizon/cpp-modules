@@ -1,12 +1,11 @@
 #include "Account.hpp"
+
 #include <ctime>
 #include <iostream>
 #include <sstream>
-
 #include <iomanip>
 
 
-// Default values
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
@@ -137,55 +136,4 @@ void Account::_displayTimestamp( void )
 	std::setfill('0') << std::setw(2) << timenow.tm_min <<
 	std::setfill('0') << std::setw(2) << timenow.tm_sec <<
 	"] ";
-	// std::time_t	t = std::time(0);
-	// std::tm * now = std::localtime(&t);
-
-	// std::stringstream year;
-	// year << now->tm_year + 1900;
-	// std::string syear;
-	// year >> syear;
-
-	// std::stringstream month;
-	// if (now->tm_mon < 10)
-	// 	month << "0" << now->tm_mon;
-	// else
-	// 	month << now->tm_mon;
-	// std::string smonth;
-	// month >> smonth;
-
-	// std::stringstream day;
-	// if (now->tm_mday < 10)
-	// 	day << "0" << now->tm_mday;
-	// else
-	// 	day << now->tm_mday;
-	// std::string sday;
-	// day >> sday;
-
-	// std::stringstream hour;
-	// if (now->tm_hour < 10)
-	// 	hour << "0" << now->tm_hour;
-	// else
-	// 	hour << now->tm_hour;
-	// std::string shour;
-	// hour >> shour;
-
-	// std::stringstream min;
-	// if (now->tm_min < 10)
-	// 	min << "0" << now->tm_min;
-	// else
-	// 	min << now->tm_min;
-	// std::string smin;
-	// min >> smin;
-
-	// std::stringstream sec;
-	// if (now->tm_sec < 10)
-	// 	sec << "0" << now->tm_sec;
-	// else
-	// 	sec << now->tm_sec;
-	// std::string ssec;
-	// sec >> ssec;
-
-	// std::cout << "[" << syear << 
-	// 	smonth << sday << "_" <<
-	// 	shour << smin << sec << "] ";
 }
