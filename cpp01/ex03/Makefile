@@ -1,5 +1,5 @@
-NAME = hibrain
-SRC = main.cp Weapon.hpp Weapon.cpp HumanA.hpp HumanA.cpp HumanB.hpp HumanB.cpp
+NAME = UnnecessaryViolence
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ = $(SRC:.cpp=.o) # Same as files in SRC but ".o" instead of ".cpp".
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
