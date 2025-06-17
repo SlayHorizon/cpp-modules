@@ -1,5 +1,5 @@
-NAME = OrthodoxCanonicalForm
-SRC = main.cpp Fixed.cpp
+NAME = Polymorphism
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ = $(SRC:.cpp=.o) # Same as files in SRC but ".o" instead of ".cpp".
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
